@@ -1,0 +1,6 @@
+{
+  "name": "Question Bank RAG",
+  "description": "A RAG-based application for managing and querying question banks using LanceDB and local embeddings.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

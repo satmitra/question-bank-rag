@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-bg: #f5f5f0;
+  --color-paper: #ffffff;
+  --color-accent: #5a6344;
+  --color-accent-soft: #8a9474;
+  --color-terracotta: #b66d4b;
+  --color-text-ink: #2c2c2a;
+  --color-text-muted: #6b6b66;
+  
+  --font-serif: "Georgia", serif;
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-text-ink font-sans;
+  }
+  
+  h1, h2, h3, .font-serif {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-accent text-white px-6 py-3 rounded-full text-sm cursor-pointer transition-opacity hover:opacity-90;
+  }
+  
+  .card {
+    @apply bg-paper rounded-[32px] p-8 shadow-[0_8px_24px_rgba(0,0,0,0.03)];
+  }
+  
+  .stat-box {
+    @apply bg-paper p-5 rounded-[20px] shadow-[0_4px_12px_rgba(0,0,0,0.02)];
+  }
+  
+  .tag {
+    @apply text-[10px] uppercase px-2 py-1 bg-[#f0f0eb] rounded-sm tracking-wider text-text-muted;
+  }
+  
+  .tag-source {
+    @apply bg-[#eef2e8] text-accent;
+  }
+}
+
